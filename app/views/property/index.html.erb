@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <%= link_to 'See Users'.html_safe, users_path, class: 'btn btn-success float-end' %>
+  <h1 class="mb-4">All Properties</h1>
+
+  <ul class="list-group">
+    <% @properties.each do |property| %>
+      <li class="list-group-item">
+        <%= link_to property.name, property_path(property), class: 'text-decoration-none' %>
+      </li>
+    <% end %>
+  </ul>
+
+  <nav aria-label="Properties Pagination" class="mt-4">
+    <ul class="pagination justify-content-center">
+      <% unless @page == 1 %>
+        <li class="page-item">
+          <%= link_to '&laquo; Previous'.html_safe, properties_path(page: @page - 1), class: 'page-link' %>
+        </li>
+      <% else %>
+        <li class="page-item disabled">
+          <span class="page-link">&laquo; Previous</span>
+        </li>
+      <% end %>
+
+      <% unless @page == @max_page %>
+        <li class="page-item">
+          <%= link_to 'Next &raquo;'.html_safe, properties_path(page: @page + 1), class: 'page-link' %>
+        </li>
+      <% else %>
+        <li class="page-item disabled">
+          <span class="page-link">Next &raquo;</span>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
