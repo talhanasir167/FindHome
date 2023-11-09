@@ -1,0 +1,70 @@
+<div class="container mt-5">
+  <%= link_to 'Back to Users', users_path, class: 'btn btn-success float-end mb-3' %>
+  <%= link_to 'Back to Properties', properties_path, class: 'btn btn-success mb-3' %>
+
+  <h1 class="text-center mb-4">User Details</h1>
+
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th>Name:</th>
+        <td><%= @user.name %></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th>Location:</th>
+        <td><%= "#{@user.city}, #{@user.state} #{@user.country_code}" %></td>
+      </tr>
+      <tr>
+        <th>Interests:</th>
+        <td><%= @user.interests.join(", ") %></td>
+      </tr>
+      <tr>
+        <th>Properties:</th>
+        <td>
+          <% @properties.each do |property| %>
+            <div class="row mb-4">
+              <div class="col-md-3">
+                <%= image_tag property.primary_photo_url, class: "img-thumbnail" %>
+              </div>
+              <div class="col-md-9">
+                <h4><%= link_to property.name, property_path(property), class: 'text-decoration-none' %></h4>
+                <p><%= property.description.truncate(300) %></p>
+                <% score = number_to_percentage(property.user_property_scores.find_by(user_id: @user.id).score * 100, precision: 0) %>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: <%= score %>" aria-valuenow="<%= score %>" aria-valuemin="0" aria-valuemax="100"><%= score %> match</div>
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+          <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>Nearby Properties:</th>
+        <td>
+          <% if @nearby_properties.empty? %>
+            <p>There are no nearby properties within a 50-mile range</p>
+          <% else %>
+            <% @nearby_properties.each do |property| %>
+              <div class="row mb-4">
+                <div class="col-md-3">
+                  <%= image_tag property.primary_photo_url, class: "img-thumbnail" %>
+                </div>
+                <div class="col-md-9">
+                  <h4><%= link_to property.name, property_path(property), class: 'text-decoration-none' %></h4>
+                  <p><%= property.description.truncate(300) %></p>
+                </div>
+              </div>
+              <hr class="mb-4">
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
