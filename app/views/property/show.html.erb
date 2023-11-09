@@ -1,0 +1,169 @@
+<%= link_to 'Back to Users'.html_safe, users_path, class: 'btn btn-success float-end' %>
+<%= link_to 'Back to Properties'.html_safe, properties_path, class: 'btn btn-success' %>
+
+<h1 class="text-center">Property Details</h1>
+
+<div class="row">
+  <div class="col-md-12 text-center mb-3 mt-3P">
+    <h4><%= @property.name %></h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag @property.primary_photo_url, width: 600, class: "rounded" %>
+  </div>
+  <div class="col-md-6">
+    <p><%= @property.description %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2 py-2">
+    <strong>City:</strong>
+  </div>
+  <div class="col-md-10 py-2 py-2">
+    <%= @property.city %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>State:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.state %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Country:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.country_code %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Location:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    (<%= @property.lat %>, <%= @property.lng %>)
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Property Style:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.property_style %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Property Type:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.property_type %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Max Occupancy:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.max_occupancy %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Bedrooms:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.bedrooms_count %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Square Footage:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.square_feet %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>View from Property:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.view_from_property %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Airport:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <%= @property.distance_from_airtport %> from <%= @property.nearest_airport %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Amenities:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <ul class="list-group">
+      <%= render partial: 'amenities', locals: { amenities: @property['amenities'] } %>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Activities:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <ul class="list-group">
+    <% if @property.activities.is_a? Enumerable %>
+      <% @property.activities.each do |activity, available| %>
+        <% if available %>
+          <li class="list-group-item"><%= activity.titleize %></li>
+        <% end %>
+      <% end %>
+    <% end %>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Places of Interest:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <ul class="list-group">
+      <% if @property.interest_places.is_a? Enumerable %>
+        <% @property.interest_places.each do |place| %>
+          <li class="list-group-item"><%= place %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2 py-2">
+    <strong>Activities of Interest:</strong>
+  </div>
+  <div class="col-md-10 py-2">
+    <ul class="list-group">
+      <% if @property.interest_activities.is_a? Enumerable %>
+        <% @property.interest_activities.each do |activity| %>
+          <li class="list-group-item"><%= activity %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Availabilities</h2>
+    <% @property.availabilities.uniq{ |a| [a.starts_on, a.ends_on]}.each do |availability| %>
+      <%= render partial: 'availability', locals: { availability: availability } %>
+    <% end %>
+  </div>
+</div>

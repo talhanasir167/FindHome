@@ -1,0 +1,12 @@
+<% if amenities.is_a? Enumerable %>
+  <% amenities.each do |amenity| %>
+    <li class="list-group-item">
+      <% arr_amenity = amenity.split(":") %>
+      <% if arr_amenity.second == "true" || arr_amenity.second == "false" %>
+        <%= arr_amenity.first.humanize(capitalize: true) %>
+      <% else %>
+        <%= arr_amenity.second %>
+      <% end %>
+    </li>
+  <% end %>
+<% end %>
