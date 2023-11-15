@@ -1,0 +1,97 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Location1
+  primary_photo_url: https://dn82xs5t7fk7h.cloudfront.net/uploads/sources/300132/extra_large/Vidanta-riviera-maya-grand-luxxe-accommodations-jungle-suite-1.jpg?1654083588
+  city: MyString
+  state: MyString
+  country_code: MyString
+  external_id: 22659
+
+two:
+  name: Location2
+  primary_photo_url: https://dn82xs5t7fk7h.cloudfront.net/uploads/sources/300135/extra_large/Vidanta-RivieraMaya-NicklausCourse-2.jpg?1654083588
+  city: MyString
+  state: MyString
+  country_code: MyString
+  external_id: 4002
+
+three:
+  name: Scotch Highlands Home at the Mountain Club at Cashiers
+  primary_photo_url: https://dn82xs5t7fk7h.cloudfront.net/uploads/sources/198425/extra_large/613735f7a99592884b40de54f0b76537.jpg?1654057066
+  city: Sapphire
+  state: North Carolina
+  country_code: US
+  external_id: 2856
+  max_occupancy: 4
+  bedrooms_count: 3
+  description: Scotch Highlands Home at The Mountain Club at Cashiers\r\n\r\nLocated near Cashiers, North Carolina and overlooking the lushly-forested Sapphire Valley, the Mountain Club is considered one of North Carolina’s most treasured spots, just steps away from golf, tennis, swimming, hiking, and exploring the spectacular Blue Ridge Mountains.\r\n\r\nResidences at the Mountain Club were designed with vacation living in mind. Open common areas, private bedrooms, and access to the surrounding natural beauty are dominant features. No detail was overlooked when completing these luxury homes. Each one provides a different view of the spectacular mountain vistas.\r\n\r\nThe Mountain Club is an enclave of custom-designed mountain homes with wood-burning stone fireplaces.\r\n\r\nThis Scotch Highlands Loop home is a one story, with a large King master bedroom with a steam shower, one queen bedroom, one bedroom with two twins, two baths with double vanities, a large family room and kitchen. There is also a queen size pull out sofa in the Family room.\r\n\r\nThis private mountain residence club sits directly across from the entrance of the Sapphire Valley Resort. In addition to our own spacious facilities, members have access to all Resort Amenities.\r\n\r\nOur families find peace, quite, friends, and as much activity as one can experience.\r\n\r\n**This property has as a NO PET POLICY for visiting THIRDHOME Members. The ability to bring a pet is reserved exclusively to Mtn. Club Owners only; not visiting THIRDHOME members.\r\n\r\n*Please note that the photos included herein are representative of The Mountain Club at Cashiers and not the actual unit you may be reserving. Interiors, views, layout and decor will vary by unit.
+  view_from_property: Blue Ridge Mountains of Western North Carolina\r\n
+  interest_places: |
+    [
+      "Blue Ridge Mountains of Western North Carolina\r\n"
+    ]
+  interest_activities: |
+    [
+      "Lake Fairfield boat dock",
+      "Tennis and racquet club",
+      "18-hole PGA golf course & 9-hole Executive golf course",
+      "Gem mining",
+      "White water rafting"
+    ]
+  reviews: |
+    [
+      {
+        "body": "The mountain club home was great...nicely appointed and well maintained.  Located just 3 miles from the center of cashiers, it was also close to great fly fishing and spectacular hiking. We happen to be there on a perfect fall week with the tree colors at their maximum. We will go back.",
+        "title": "Enjoyed mountain club",                               
+        "rating": 5,                                                    
+        "stay_date": "2014-10-24",                                      
+        "reviewer_name": "Howard Wexler"
+      },
+      {
+        "body": "This property needs a little work.  Surrounded by beautiful scenery.",
+        "title": "Needs some work",
+        "rating": 2,
+        "stay_date": "2017-09-08", 
+        "reviewer_name": "David Myers"
+      }
+    ]
+
+four:
+  name: Scotch Home at the Club at Cashiers
+  primary_photo_url: https://dn82xs5t7fk7h.cloudfront.net/uploads/sources/198425/extra_large/613735f7a99592884b40de54f0b76537.jpg?1654057066
+  city: Sapphire
+  state: North Carolina
+  country_code: US
+  external_id: 2856
+  max_occupancy: 2
+  bedrooms_count: 1
+  description: Scotch Home at The Club at Cashiers\r\n\r\nLocated near Cashiers, North Carolina and overlooking the lushly-forested Sapphire Valley, the Club is considered one of North Carolina’s most treasured spots, just steps away from tennis, swimming, hiking, and exploring the spectacular Blue Ridge.\r\n\r\nResidences at the Club were designed with vacation living in mind. Open common areas, private bedrooms, and access to the surrounding natural beauty are dominant features. No detail was overlooked when completing these luxury homes. Each one provides a different view of the spectacular vistas.\r\n\r\nThe Club is an enclave of custom-designed homes with wood-burning stone fireplaces.\r\n\r\nThis Scotch Loop home is a one story, with a large King master bedroom with a steam shower, one queen bedroom, one bedroom with two twins, two baths with double vanities, a large room and kitchen. There is also a queen size pull out sofa in the room.\r\n\r\nThis private residence club sits directly across from the entrance of the Sapphire Resort. In addition to our own spacious facilities, members have access to all Resort Amenities.\r\n\r\nOur families find peace, quite, friends, and as much activity as one can experience.\r\n\r\n**This property has as a NO PET POLICY for visiting THIRDHOME Members. The ability to bring a pet is reserved exclusively to Club Owners only; not visiting THIRDHOME members.\r\n\r\n*Please note that the photos included herein are representative of The Club at Cashiers and not the actual unit you may be reserving. Interiors, views, layout and decor will vary by unit.
+  view_from_property: Blue Ridge of Western North Carolina\r\n
+  interest_places: |
+    [
+      "Blue Ridge of Western North Carolina\r\n",
+      "Cabo San Lucas is similar"
+    ]
+  interest_activities: |
+    [
+      "Lake Fairfield boat dock",
+      "Urban planning"
+    ]
+  reviews: |
+    [
+      {
+        body: "The mountain club home was great...nicely appointed and well maintained.  Located just 3 miles from the center of cashiers, it was also close to great fly fishing and spectacular hiking. We happen to be there on a perfect fall week with the tree colors at their maximum. We will go back.",
+        title: "Enjoyed mountain club",                               
+        rating: 5,                                                    
+        stay_date: "2014-10-24",                                      
+        reviewer_name: "Howard Wexler"
+      },
+      {
+        body: "My family and I enjoyed a week at the Mountain Club in Mid July. It was a wonderful break from the heat and hustle of life. There are several top rated golf courses in the area that we enjoyed, and also great shopping, dining, and hiking to numerous waterfalls in the area. The house itself was comfortable and had enough space so that the kids could entertain themselves while we relaxed.  I look forward to our next visit.",            
+        title: "Gret family getaway!",                               
+        rating: 5,                                                    
+        stay_date: "2017-07-16",                                      
+        reviewer_name: "Jesse Washburn"
+      }
+    ]

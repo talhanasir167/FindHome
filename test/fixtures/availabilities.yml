@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starts_on: 2023-02-27
+  ends_on: 2023-02-27
+  property: one
+  external_id: 
+
+two:
+  starts_on: 2023-02-27
+  ends_on: 2023-02-27
+  property: two
+  external_id: 
